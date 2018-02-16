@@ -3,6 +3,22 @@ project(GameEngine)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_library(ImGui
+        "libs/imgui/imgui.cpp"
+        "libs/imgui/imgui_demo.cpp"
+        "libs/imgui/imgui_draw.cpp"
+        "libs/imgui/imconfig.h"
+        "libs/imgui/imgui.h"
+        "libs/imgui/imgui_internal.h"
+        "libs/imgui/stb_rect_pack.h"
+        "libs/imgui/stb_textedit.h"
+        "libs/imgui/stb_truetype.h")
+
+add_library(glad
+        "libs/glad/src/glad.c"
+        "libs/glad/include/glad/glad.h"
+        "libs/glad/include/KHR/khrplatform.h")
+
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
@@ -10,8 +26,6 @@ set(GLFW_USE_HYBRID_HPG ON CACHE BOOL "" FORCE)
 
 add_subdirectory(libs/glfw)
 add_subdirectory(libs/glm)
-add_subdirectory(libs/imgui)
-add_subdirectory(libs/glad)
 
 include_directories(libs/glad/include)
 include_directories(libs/glm/glm)
