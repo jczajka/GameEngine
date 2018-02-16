@@ -34,7 +34,6 @@ int main(void) {
     std::cout << glGetString(GL_VERSION) << std::endl;
 
     ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO();
     ImGui_ImplGlfwGL3_Init(window, true);
     ImGui::StyleColorsLight();
 
