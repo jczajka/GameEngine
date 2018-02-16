@@ -27,7 +27,7 @@ int main(void) {
     glfwMakeContextCurrent(window);
     gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
 
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
 
     std::cout << glGetString(GL_VERSION) << std::endl;
 
